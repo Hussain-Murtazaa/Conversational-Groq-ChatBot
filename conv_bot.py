@@ -20,15 +20,17 @@ st.title("💬 Groq Chatbot with Memory")
 ## sidebar 
 with st.sidebar:
     st.subheader("Controls")
+    api_key_input = st.text_input("Groq API Key", type="password")
+    api_key = api_key_input or os.getenv("GROQ_API_KEY")
+   
     model_name = st.selectbox(
         "Groq Model",
         [
-            "llama-3.1-8b-instant",
-            "llama-3.1-70b-versatile",
-            "llama-3.2-90b-text-preview",
             "qwen/qwen3-32b",
-            "gemma2-9b-it",
-            "mixtral-8x7b-32768"
+            "llama-3.1-8b-instant",
+            "llama-3.3-70b-versatile",
+            "openai/gpt-oss-20b",
+            "llama-3.1-8b-instant"
         ],
         index=1
     )
@@ -57,11 +59,15 @@ Now strictly follow the user's instructions below:"""
         st.session_state.pop("history", None)
         st.rerun()
 
-
-# API Key guard
-if not GROQ_API_KEY:
-    st.error("Missing GROQ_API_KEY. Add it to your .env or deployment secrets.")
+# Accept key from input OR .env
+if not api_key:
+    st.warning("🔑 Please enter your Groq API Key (or set GROQ_API_KEY in .env).")
     st.stop()
+
+# # API Key guard
+# if not GROQ_API_KEY:
+#     st.error("Missing GROQ_API_KEY. Add it to your .env or deployment secrets.")
+#     st.stop()
 
 # initilize single history
 if "history" not in st.session_state:
@@ -161,6 +167,5 @@ if st.session_state.history.messages:
         mime="application/json",
         use_container_width=True
     ) 
-
 
 

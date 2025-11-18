@@ -9,17 +9,15 @@ This project demonstrates how to use Groq's ultra-fast inference models (LLaMA 3
 ⚡ Groq LLM Integration
 Supports multiple high-speed Groq models:
 
-llama-3.1-8b-instant
-
-llama-3.1-70b-versatile
-
-llama-3.2-90b-text-preview
-
 qwen/qwen3-32b
 
-gemma2-9b-it
+llama-3.1-8b-instant
 
-mixtral-8x7b-32768
+llama-3.3-70b-versatile
+
+openai/gpt-oss-20b
+
+llama-3.1-8b-instant
 
 🧠 Chat Memory using
 InMemoryChatMessageHistory + RunnableWithMessageHistory

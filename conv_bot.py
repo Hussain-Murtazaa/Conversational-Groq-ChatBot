@@ -21,6 +21,7 @@ st.title("💬 Groq Chatbot with Memory")
 with st.sidebar:
     st.subheader("Controls")
     api_key_input = st.text_input("Groq API Key", type="password")
+    st.markdown(":gray[<font size='2'>Enter API Key if the bot is not working or you have paid API Key</font>]", unsafe_allow_html=True)
     api_key = api_key_input or os.getenv("GROQ_API_KEY")
    
     model_name = st.selectbox(
@@ -167,5 +168,6 @@ if st.session_state.history.messages:
         mime="application/json",
         use_container_width=True
     ) 
+
 
 

@@ -40,7 +40,7 @@ Custom system prompt
 
 📦 Installation
 1. Clone the repo
-git clone https://github.com/yourusername/groq-chatbot-memory.git
+git clone https://github.com/Hussain-Murtazaa/Conversational-Groq-Chatbot.git
 cd groq-chatbot-memory
 
 2. Create a virtual environment

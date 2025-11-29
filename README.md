@@ -1,4 +1,4 @@
-![Groq Chatbot Banner](https://github.com/Hussain-Murtazaa/Conversational-Groq-Chatbot/raw/main/Banner.png)
+![Groq Chatbot Banner](https://github.com/Hussain-Murtazaa/Conversational-Groq-Chatbot/raw/main/Bnner.png)
 💬 Groq Chatbot with Memory
 
 A conversational AI app built using Streamlit, LangChain, and Groq LLMs, featuring real-time chat, persistent memory, customizable system prompts, and exportable chat history.
